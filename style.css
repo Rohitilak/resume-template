@@ -67,6 +67,7 @@ body{
     height: 30px;
     object-fit: contain;
 }
+
 .main{
     width: 100%;
     height: 100%;
@@ -79,12 +80,13 @@ body{
 .leftContainer{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     width: 40%;
     /* overflow-y: scroll; */
     padding: 5px;
     /* border: 1px solid #127c0e; */
 }
+
 /* .leftContainer::-webkit-scrollbar-track{
     
 } */
@@ -222,7 +224,7 @@ textarea{
     background-color: #127c0e;
     color: white;
     font-size: 14px;
-    font-family: 'Nunito', sans-serif ;
+    font-family: "Roboto Slab", serif;
 }
 
 #header{
@@ -387,7 +389,7 @@ h4{
 input{
     height: 30px;
     border: rgb(14, 14, 233);
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 2px;
     width: 100%;
     padding: 0 10px;
