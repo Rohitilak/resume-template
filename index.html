@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./icons8-resume-64.png">
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="mainHeader">
-        <div class="icon"><img class="resumeIcon" src="./images/resume_icon.png" alt=""><h1>Resume Generator</h1></div>
+        <div class="icon"><img class="resumeIcon" src="./images/resume_icon.png" alt=""><h1></h1></div>
         <button onclick="generatePDF()" class="downloadBtn" id="downloadPdf"><img class="downloadIcon" src="./images/download_icon.png" alt="">Download PDF</button>
     </div>
 
@@ -23,10 +26,12 @@
                     <option value="Minimalistic">Minimalistic</option>
                 </select>
             </div>
+
             <div id="headerColor">
                 <h1>Header Color</h1>
                 <input type="color" value="#7dfsad" name="" id="headerColorInput">
             </div>
+
             <div id="headerTextColor">
                 <h1>Header-Text Color</h1>
                 <input type="color" value="#cccccc" id="headerTextColorInput">
@@ -38,21 +43,25 @@
                 <input type="tel" maxlength="10" name="" id="phoneInput" placeholder="Phone">
                 <input type="text" name="" id="addressInput" placeholder="City, Country">
             </div>
+
             <div id="professionalDetails">
                 <h1>Professional Details</h1>
                 <input type="text" id="jobRoleInput" placeholder="Wanted job title">
                 <textarea name="" id="descriptionInput" placeholder="Professional Summary"></textarea>
                 <input type="text" id="skillsInput" placeholder="Skills">
             </div>
+
             <div id="employementbtn">
                 <button id="addEmployement">Add Employement</button>
                 <div id="Employement-details">
                 </div>
             </div>
+
             <div id="projectBtn">
                 <button id="addProject">Add Project</button>
                 <div id="projectDetails"></div>
             </div>
+            
             <div id="educationContainer">
                 <h1>Educational Background</h1>
                 <div id="educationBtn">
@@ -61,6 +70,7 @@
                 </div>
             </div>
         </div>
+
         <div class="rightContainer" id="pdf">
             <div id="twoColumnTemplate">
                 <div id="header">
@@ -101,7 +111,9 @@
                             <h4>SUMMARY</h4>
                             <hr>
                             <br>
-                            <p id="summaryPara"></p>
+                            <p id="summaryPara">
+
+                            </p>
                         </div>
                         
                         <div id="professionalExperienceSection">
@@ -143,15 +155,21 @@
                     <div id="contactSection2">
                         <div id="contactInfo2">
                             <div id="contactImg"><img src="./call_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
-                            <div id="phoneMinimalistic"></div>
+                            <div id="phoneMinimalistic">
+
+                            </div>
                         </div>
                         <div id="contactInfo2">
                             <div id="contactImg"><img src="./mail_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
-                            <div id="mailMinimalistic"></div>
+                            <div id="mailMinimalistic">
+
+                            </div>
                         </div>
                         <div id="contactInfo2">
                             <div id="contactImg"><img src="./location_on_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
-                            <div id="locationMinimalistic"></div>
+                            <div id="locationMinimalistic">
+
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -5,45 +5,13 @@ const selectTemplate = document.getElementById("select");
 const twoColumnsTemp = document.getElementById("twoColumnTemplate");
 const minimalistic = document.getElementById("minimalisticTemplate");
 
-selectTemplate.addEventListener("change" , e => {
-    // console.log(e.target.value);
-    if(e.target.value === "Two-columns"){
-        twoColumnsTemp.style.display = "block";
-        minimalistic.style.display = "none";
-    }else if(e.target.value === "Minimalistic"){
-        minimalistic.style.display = "block";
-        twoColumnsTemp.style.display = "none";
-    }
-})
-
-// to select the header color
-
 const headerColor = document.getElementById("headerColorInput");
 const twoTempHeader = document.getElementById("header");
 const minimalisticHeader = document.getElementById("header2");
 
-headerColor.addEventListener("input" , e => {
-    // console.log(e.value);
-    twoTempHeader.style.backgroundColor = e.target.value;
-    minimalisticHeader.style.backgroundColor = e.target.value;
-})
-
-
-// to choose the header text color
-
 const headerTextColor = document.getElementById("headerTextColorInput");
 const headerText1 = document.getElementById("info");
 const headerText2 = document.getElementById("info2");
-
-headerTextColor.addEventListener("input" , e => {
-    // console.log(e.value);
-    headerText1.style.color = e.target.value;
-    headerText2.style.color = e.target.value;
-    document.getElementById("contactSection2").style.color = e.target.value;
-})
-
-
-// to append all the personal details inputs in templates
 
 const nameInput = document.getElementById("nameInput");
 const emailInput = document.getElementById("emailInput");
@@ -54,6 +22,33 @@ const nameInTemplates = document.getElementById("name");
 const email = document.getElementById("mail");
 const phone = document.getElementById("phone");
 const address = document.getElementById("location");
+
+
+
+selectTemplate.addEventListener("change" , e => {
+
+    if(e.target.value === "Two-columns"){
+        twoColumnsTemp.style.display = "block";
+        minimalistic.style.display = "none";
+    }else if(e.target.value === "Minimalistic"){
+        minimalistic.style.display = "block";
+        twoColumnsTemp.style.display = "none";
+    }
+})
+
+headerColor.addEventListener("input" , e => {
+    twoTempHeader.style.backgroundColor = e.target.value;
+    minimalisticHeader.style.backgroundColor = e.target.value;
+})
+
+
+headerTextColor.addEventListener("input" , e => {
+    headerText1.style.color = e.target.value;
+    headerText2.style.color = e.target.value;
+    document.getElementById("contactSection2").style.color = e.target.value;
+})
+
+
 
 nameInput.addEventListener("input" , () => {
     nameInTemplates.innerText = nameInput.value;
@@ -72,7 +67,7 @@ addressInput.addEventListener("input" , () => {
     document.getElementById("locationMinimalistic").innerText = addressInput.value;
 })
 
-// to add skills
+
 let skillsInput = document.getElementById("skillsInput");
 skillsInput.addEventListener("input" , () => {
    
@@ -81,16 +76,13 @@ skillsInput.addEventListener("input" , () => {
 
     let skillsOutput = document.getElementById("skillsOutput");
 
-    // Clear previous content
     skillsOutput.innerHTML = '';
-
-    // Append each word to outputDiv
     words.forEach(function(word) {
       let span = document.createElement("span");
-      span.textContent = word.trim(); // Remove leading/trailing spaces
+      span.textContent = word.trim(); 
 
       skillsOutput.appendChild(span);
-      skillsOutput.appendChild(document.createTextNode(' ')); // Add space between words
+      skillsOutput.appendChild(document.createTextNode(' ')); 
     });
   })
 skillsInput.addEventListener("input" , () => {
@@ -99,21 +91,18 @@ skillsInput.addEventListener("input" , () => {
     let words = inputValue.split(',');
 
     let skillsOutput2 = document.getElementById("skillsOutput2");
-
-    // Clear previous content
     skillsOutput2.innerHTML = '';
 
-    // Append each word to outputDiv
     words.forEach(function(word) {
       let span = document.createElement("span");
-      span.textContent = word.trim(); // Remove leading/trailing spaces
+      span.textContent = word.trim(); 
 
       skillsOutput2.appendChild(span);
-      skillsOutput2.appendChild(document.createTextNode(' ')); // Add space between words
+      skillsOutput2.appendChild(document.createTextNode(' ')); 
     });
   })
 
-// to append all professional details in templates
+
 
 const jobRoleInput = document.getElementById("jobRoleInput");
 const jobRole = document.getElementById("jobRole");
@@ -134,7 +123,6 @@ descriptionInput.addEventListener("input" , () => {
     summarySection2.innerText = descriptionInput.value;
 })
 
-// button events
 
 const employementBtn = document.getElementById("addEmployement"); 
 const addEmployementSection = document.getElementById("Employement-details"); 
@@ -186,7 +174,6 @@ employementBtn.addEventListener("click", () => {
     const employerInput = div1.querySelector("#employerInput");
     const descriptionInput = div1.querySelector("#JobdescriptionInput");
 
-// two column 
     const JobStartDate = rightDiv1.querySelector("#JobStartDate");
     const JobEndDate = rightDiv1.querySelector("#JobEndDate");
     const jobTitleInfo = rightDiv1.querySelector("#jobTitleInfo");
@@ -195,7 +182,7 @@ employementBtn.addEventListener("click", () => {
     JobStartDate.style.fontWeight = "bold";
     JobEndDate.style.fontWeight = "bold";
     jobTitleInfo.style.fontWeight = "bold";
-// minimalistic
+
     const JobStartDate2 = rightDiv2.querySelector("#MiniJobStartDate");
     const JobEndDate2 = rightDiv2.querySelector("#MiniJobEndDate");
     const jobTitleInfo2 = rightDiv2.querySelector("#MinijobTitleInfo");
@@ -280,7 +267,7 @@ projectBtn.addEventListener("click" , () => {
     const projectInput = div2.querySelector("#projectTitleInput");
     const projectdescriptionInput = div2.querySelector("#projectDescriptionInput");
 
-// two column 
+ 
     const projectStartDate = projectDiv1.querySelector("#projectStartDate");
     const projectEndDate = projectDiv1.querySelector("#projectEndDate");
     const projectTitleInfo = projectDiv1.querySelector("#projectTitleInfo");
@@ -288,7 +275,7 @@ projectBtn.addEventListener("click" , () => {
     projectStartDate.style.fontWeight = "bold";
     projectEndDate.style.fontWeight = "bold";
     projectTitleInfo.style.fontWeight = "bold";
-// minimalistic
+
     const projectStartDate2 = projectDiv2.querySelector("#MiniprojectStartDate");
     const projectEndDate2 = projectDiv2.querySelector("#MiniprojectEndDate");
     const projectTitleInfo2 = projectDiv2.querySelector("#MiniprojectTitleInfo");
